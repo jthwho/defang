@@ -7,6 +7,10 @@ CONF_SENTINEL := .qtconf.sentinel
 
 default: build
 
+.PHONY: toolchain
+toolchain:
+	$(MAKE) -C ../../build/.support/toolchain
+
 $(QT_SENTINEL):
 	git clone $(QT_GIT_URL) src
 	cd src && git checkout $(QT_GIT_TAG)
@@ -16,7 +20,7 @@ $(QT_SENTINEL):
 
 .PHONY: configure
 configure: $(CONF_SENTINEL)
-$(CONF_SENTINEL): $(QT_SENTINEL)
+$(CONF_SENTINEL): $(QT_SENTINEL) toolchain
 	cd src && ./configure \
 		-prefix /system/sdcard \
 	        -extprefix $(PWD)/build/target \
