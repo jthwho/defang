@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+SELF_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Make sure the toolchain is ready
+( cd ${SELF_PATH}/.support/toolchain && make -s )
+
+qmake -spec ${SELF_PATH}/.support/spec/linux-mips-uclibc-g++
+
