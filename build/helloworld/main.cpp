@@ -23,8 +23,10 @@
 
 
 #include <stdio.h>
+#include <QCoreApplication>
 
 int main(int argc, char *argv[]) {
+        QCoreApplication app(argc, argv);
         printf("Hello World\n");
         return 0;
 }

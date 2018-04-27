@@ -1,4 +1,3 @@
-Updated makefile
 # Change the CURRENT_TOOLCHAIN variable with the name of the current toolchain
 # if it changes.  The name should reference a tarball of the same name which,
 # when extraced, will create a folder with the same name that contains the
