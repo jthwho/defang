@@ -1,0 +1,6 @@
+*.sentinel
+build/
+*/.build/
+*/Makefile
+*/.qmake*
+upload

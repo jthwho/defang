@@ -28,6 +28,6 @@
 int main(int argc, char *argv[]) {
         QCoreApplication app(argc, argv);
         printf("Hello World\n");
-        return 0;
+        return app.exec();
 }
 

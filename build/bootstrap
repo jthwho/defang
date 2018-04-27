@@ -12,6 +12,5 @@ QMAKE=${SELF_PATH}/.support/qt/current/host/bin/qmake
 # Make sure the qt tools are ready
 ( cd ${SELF_PATH}/.support/qt && make -s )
 
-
 ${QMAKE} -spec linux-mips-uclibc-g++
 

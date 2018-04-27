@@ -1,0 +1,4 @@
+kernel-headers-*/
+kernel-headers-*.tgz
+src/.config
+

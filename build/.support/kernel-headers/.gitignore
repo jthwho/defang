@@ -1,0 +1,4 @@
+*.sentinel
+current
+kernel-headers-*/
+

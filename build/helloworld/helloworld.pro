@@ -1,4 +1,4 @@
-CONFIG -= gui
+include(../config-app.pri)
 
 HEADERS = 
 
