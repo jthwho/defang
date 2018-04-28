@@ -24,9 +24,21 @@
 
 #include <stdio.h>
 #include <QCoreApplication>
+#include "capturevideo.h"
 
 int main(int argc, char *argv[]) {
         QCoreApplication app(argc, argv);
+        CaptureVideo v[3];
+
+        for(int i = 0; i < 3; i++) {
+                if(v[i].open(i)) {
+                        printf("Device %d opened\n", i);
+                        v[i].dumpCaps();
+                } else {
+                        printf("Device %d open failed: %s\n", i, qPrintable(v[i].errorString()));
+                }
+        }
+
         return app.exec();
 }
 

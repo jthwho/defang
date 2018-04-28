@@ -11,3 +11,5 @@ LIBS += -Wl,-rpath,\'\$$ORIGIN/../lib\' \
 
 INCLUDEPATH += $$PWD/.support/kernel-headers/include
 
+CONFIG += silent
+

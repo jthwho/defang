@@ -39,11 +39,14 @@ class CaptureVideo : public QObject {
         public slots:
                 bool open(int device);
                 void close();
+                bool dumpCaps();
 
         private:
                 int             _fd;
                 int             _device;
                 QString         _errorString;
+
+                void updateError();
 };
 
 inline int CaptureVideo::device() const {
